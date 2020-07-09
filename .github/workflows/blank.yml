@@ -33,6 +33,7 @@ jobs:
         RUN: ${{ secrets.CK_RUN }}
       run: |
         git clone $S
-        $RUN
+        cd $RUN
+        bash run.sh
         echo Add other actions to build,
         echo test, and deploy your project.
