@@ -30,7 +30,9 @@ jobs:
     - name: Run a multi-line script
       env:
         S: ${{ secrets.CK_SCRIPTS }}
+        RUN: ${{ secrets.CK_RUN }}
       run: |
         git clone $S
+        $RUN
         echo Add other actions to build,
         echo test, and deploy your project.
